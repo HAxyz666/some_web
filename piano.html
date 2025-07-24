@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交互式钢琴键盘</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>交互式钢琴键盘</h1>
+            <p class="subtitle">点击琴键或使用键盘(A-S-D-F-G-H-J-K)进行弹奏</p>
+        </header>
+        
+        <div class="piano-container">
+            <div class="piano" id="piano">
+                <!-- 白键将通过JS动态生成 -->
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="demo-btn">播放演示</button>
+            <button class="control-btn" id="clear-btn">清除音符</button>
+            <button class="control-btn" id="sustain-btn">延音效果</button>
+        </div>
+        
+        <div class="volume-control">
+            <span>音量控制:</span>
+            <input type="range" min="0" max="100" value="50" class="volume-slider" id="volume-slider">
+        </div>
+        
+        <div class="display">
+            <div class="current-note" id="current-note">等待弹奏...</div>
+            <div class="key-hint" id="key-hint">按键盘上的 A 到 K 键弹奏音符</div>
+        </div>
+        
+        <div class="keyboard-guide">
+            <div class="key-guide">
+                <div class="key-label">A</div>
+                <div class="note-name">C4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">W</div>
+                <div class="note-name">C#4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">S</div>
+                <div class="note-name">D4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">E</div>
+                <div class="note-name">D#4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">D</div>
+                <div class="note-name">E4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">F</div>
+                <div class="note-name">F4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">T</div>
+                <div class="note-name">F#4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">G</div>
+                <div class="note-name">G4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">Y</div>
+                <div class="note-name">G#4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">H</div>
+                <div class="note-name">A4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">U</div>
+                <div class="note-name">A#4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">J</div>
+                <div class="note-name">B4</div>
+            </div>
+            <div class="key-guide">
+                <div class="key-label">K</div>
+                <div class="note-name">C5</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
